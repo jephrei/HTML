@@ -5,12 +5,12 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <style>
-.cntrl:checked ~ p { display: none; }	
+#cntrl:checked ~ p { display: none; }	
 </style>
 </head>
 <body>
 
-<input type="checkbox" class="cntrl" id="cntrl" /><label for="cntrl">compact view/elements only</label>
+<input type="checkbox" id="cntrl" /><label for="cntrl">compact (elements only)</label>
 
 <div><!-- extra div to override compact view -->
 
@@ -25,10 +25,12 @@
 		<li><code>[controls]</code> - <code>audio</code>, <code>video</code></li>
 		<li><code>[disabled]</code> - <code>video</code>, <code>input</code></li>
 		<li><code>[href]</code> - <code>a</code></li>
+		<li><code>[placeholder]</code> - <code>input</code></li>
 		<li><code>[src]</code> - <code>img</code></li>
 		<li><code>[title]</code> - <code>a</code>, <code>img</code>, practically anything</li>
 		<li><code>[type]</code> - <code>video</code>, <code>input</code></li>
 	</ul>
+	<a href="http://github.com/jephrei/HTML">Github</a>
 </details>
 	
 </div>
@@ -48,8 +50,7 @@
 	contact persons for the <a href="activity">W3C HTML Activity</a>
 </address>
 
-<p><code>area</code> &ndash; image-map hyperlink</p>
-
+<!-- <p><code>area</code> &ndash; image-map hyperlink</p> -->
 <!-- article &ndash; article -->
 <!-- aside &ndash; tangential content -->
 
@@ -101,7 +102,7 @@ function draw_b() {
 <!-- caption &ndash; table title -->
 
 <p><code>cite</code> &ndash; cited title of a work</p>
-<p>More information can be found in <cite>[ISO-0000]</cite>.</p>
+<span>More information can be found in <cite>[ISO-0000]</cite>.</span>
 
 <p><code>code</code> &ndash; code fragment</p>
 <code>&lt;h1>Hello, World!&lt;h1></code>
@@ -116,7 +117,7 @@ function draw_b() {
 <!-- dd &ndash; description or value -->
 
 <p><code>del</code> &ndash; deleted text</p>
-The show is on <del>Oct. 14th</del> November 2nd.
+<span>The show is on <del>Oct. 14th</del> November 2nd.</span>
 
 <p><code>details</code> &ndash; control for additional on-demand information</p>
 <details>
@@ -125,7 +126,7 @@ The show is on <del>Oct. 14th</del> November 2nd.
 </details>
 
 <p><code>dfn</code> &ndash; defining instance</p>
-<p><dfn>The Internet</dfn> is a global system of interconnected networks that use the Internet Protocol Suite (TCP/IP) to serve billions of users worldwide.</p>
+<span><dfn>The Internet</dfn> is a global system of interconnected networks that use the Internet Protocol Suite (TCP/IP) to serve billions of users worldwide.</span>
 
 <!-- div &ndash; generic flow container -->
 
@@ -201,7 +202,7 @@ The show is on <del>Oct. 14th</del> November 2nd.
 <input />
 
 <p><code>input type=text</code> &ndash; text-input field</p>
-<input type="text" />
+<input type="text" placeholder="Text Input" />
 
 <p><code>input type=password</code> &ndash; password-input field</p>
 <input type="password" />
@@ -255,7 +256,9 @@ The show is on <del>Oct. 14th</del> November 2nd.
 <!-- li &ndash; list item -->
 <!-- link &ndash; inter-document relationship metadata -->
 <!-- map &ndash; image-map definition -->
-<!-- mark &ndash; marked (highlighted) text -->
+
+<p><code>mark</code> &ndash; marked (highlighted) text</p>
+<span><mark>Lorem ipsum</mark> dolor sit amet.</span>
 
 <p><code>menu</code> &ndash; list of commands</p>
 <menu>
@@ -282,7 +285,10 @@ The show is on <del>Oct. 14th</del> November 2nd.
 <!-- meta http-equiv=default-style &ndash; Òpreferred stylesheetÓ pragma directive -->
 <!-- meta charset &ndash; document character-encoding declaration -->
 <!-- meta http-equiv=content-type &ndash; document character-encoding declaration -->
-<!-- meter &ndash; scalar gauge -->
+
+<p><code>meter</code> &ndash; scalar gauge</p>
+<meter min="200" max="500" value="350">350 degrees</meter>
+<meter low="69" high="80" max="100" value="84">B</meter>
 
 <p><code>nav</code> &ndash; group of navigational links</p>
 <nav>
@@ -328,7 +334,9 @@ The show is on <del>Oct. 14th</del> November 2nd.
 <p><code>progress</code> &ndash; progress indicator</p>
 <progress max="100" value="66"></progress>
 
-<!-- q &ndash; quoted text -->
+<p><code>q</code> &ndash; quoted text</p>
+<span>Lorem ipsum <q>dolor sit</q> amet.</span>
+
 <!-- rp &ndash; ruby parenthesis -->
 <!-- rt &ndash; ruby text -->
 <!-- ruby &ndash; ruby annotation -->
@@ -373,12 +381,12 @@ The show is on <del>Oct. 14th</del> November 2nd.
 <!-- style &ndash; style (presentation) information -->
 
 <p><code>sub</code> &ndash; subscript</p>
-H<sub>2</sub>O
+<span>H<sub>2</sub>O</span>
 
 <!-- summary &ndash; summary, caption, or legend for a details control -->
 
 <p><code>sup</code> &ndash; superscript</p>
-E=MC<sup>2</sup>
+<span>E=MC<sup>2</sup></span>
 
 <p><code>table</code> &ndash; table</p>
 <table>
@@ -418,7 +426,7 @@ E=MC<sup>2</sup>
 <!-- td &ndash; table cell -->
 
 <p><code>textarea</code> &ndash; text input area</p>
-<textarea></textarea>
+<textarea>Placeholder</textarea>
 
 <!-- tfoot &ndash; table footer row group -->
 <!-- th &ndash; table header cell -->
@@ -451,14 +459,16 @@ E=MC<sup>2</sup>
 
 <hr />
 
-<h2>Common Combinations</h2>
+<div style="display: none;"><!-- extra div to override compact view -->
 
+<h2>Common Semantic Element Layouts</h2>
 <p>Lorem ipsum dolor sit amet...</p>
 
 <hr />
 
+</div>
+
 <address>curated by <a href="https://github.com/jephrei" rel="author">jephrei</a></address>
 
 </body>
-
 </html>

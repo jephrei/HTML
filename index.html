@@ -4,11 +4,39 @@
 <title>All The Elements</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+.cntrl:checked ~ p { display: none; }
+.cntrl:checked ~ p:after {
+    content: '\A';
+    white-space: pre;
+}
+	
+</style>
 </head>
 <body>
 
+<div><!-- extra div to protect from disappearing with checkbox element showcase -->
+
 <h1>All The Elements</h1>
-<p>a gallery of all the visual HTML elements for easy CSS style checking and HTML snippet copying</p>
+<p>a gallery of all the visual HTML elements for easy CSS style checking and HTML snippet copying.</p>
+
+<details>
+	<summary>more&hellip;</summary>
+	<p>Not many attributes are added to the elements except when commonly used. For example:</p>
+	<ul>
+		<li><code>[alt]</code> - <code>img</code></li>
+		<li><code>[controls]</code> - <code>audio</code>, <code>video</code></li>
+		<li><code>[disabled]</code> - <code>video</code>, <code>input</code></li>
+		<li><code>[href]</code> - <code>a</code></li>
+		<li><code>[src]</code> - <code>img</code></li>
+		<li><code>[title]</code> - <code>a</code>, <code>img</code>, practically anything</li>
+		<li><code>[type]</code> - <code>video</code>, <code>input</code></li>
+	</ul>
+</details>
+	
+</div>
+
+<input type="checkbox" class="cntrl" id="cntrl" /><label for="cntrl">elements only</label>
 
 <hr />
 
@@ -50,6 +78,7 @@
 
 <!-- body &ndash; document body -->
 <!-- br &ndash; line break -->
+
 <p><code>button</code> &ndash; button</p>
 <button>Button</button>
 <button disabled>Disabled Button</button>
@@ -57,7 +86,23 @@
 <!-- button type=submit &ndash; submit button -->
 <!-- button type=reset &ndash; reset button -->
 <!-- button type=button &ndash; button with no additional semantics -->
-<!-- canvas &ndash; canvas for dynamic graphics -->
+
+<!--
+<p><code>canvas</code> &ndash; canvas for dynamic graphics</p>
+<script>
+$(document).ready(function () {
+	
+function draw_b() {
+  var b_canvas = document.getElementById("b");
+  var b_context = b_canvas.getContext("2d");
+  b_context.fillRect(50, 25, 150, 100);
+}
+
+});
+</script>
+<canvas id="b" width="300" height="225"></canvas>
+-->
+
 <!-- caption &ndash; table title -->
 
 <p><code>cite</code> &ndash; cited title of a work</p>
@@ -84,7 +129,9 @@ The show is on <del>Oct. 14th</del> November 2nd.
   <p>Details. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 </details>
 
-<!-- dfn &ndash; defining instance -->
+<p><code>dfn</code> &ndash; defining instance</p>
+<p><dfn>The Internet</dfn> is a global system of interconnected networks that use the Internet Protocol Suite (TCP/IP) to serve billions of users worldwide.</p>
+
 <!-- div &ndash; generic flow container -->
 
 <p><code>dl</code> &ndash; description list</p>
@@ -109,7 +156,13 @@ The show is on <del>Oct. 14th</del> November 2nd.
 </fieldset>
 
 <!-- figcaption &ndash; figure caption -->
-<!-- figure &ndash; figure with optional caption -->
+
+<p><code>figure</code> &ndash; figure with optional caption</p>
+<figure>
+	<img src="http://placekitten.com/240" />
+	<figcaption>a cute kitten</figcaption>
+</figure>
+
 <!-- footer &ndash; footer -->
 <!-- form &ndash; user-submittable form -->
 
@@ -134,16 +187,35 @@ The show is on <del>Oct. 14th</del> November 2nd.
 <!-- head &ndash; document metadata container -->
 <!-- header &ndash; header -->
 <!-- hgroup &ndash; heading group -->
-<!-- hr &ndash; thematic break -->
+
+<p><code>hr</code> &ndash; thematic break</p>
+<hr />
+
 <!-- html &ndash; root element -->
-<!-- i &ndash; offset text conventionally styled in italic -->
-<!-- iframe &ndash; nested browsing context (inline frame) -->
-<!-- img &ndash; image -->
-<!-- input &ndash; input control -->
-<!-- input type=text &ndash; text-input field -->
-<!-- input type=password &ndash; password-input field -->
-<!-- input type=checkbox &ndash; checkbox -->
-<!-- input type=radio &ndash; radio button -->
+
+<p><code>i</code> &ndash; offset text conventionally styled in italic</p>
+<i>italics</i>
+
+<p><code>iframe</code> &ndash; nested browsing context (inline frame)</p>
+<iframe></iframe>
+
+<p><code>img</code> &ndash; image</p>
+<img src="http://placekitten.com/240" alt="a cute kitten" title="it's a cute frakkin' kitten" />
+
+<p><code>input</code> &ndash; input control</p>
+<input />
+
+<p><code>input type=text</code> &ndash; text-input field</p>
+<input type="text" />
+
+<p><code>input type=password</code> &ndash; password-input field</p>
+<input type="password" />
+
+<p><code>input type=checkbox</code> &ndash; checkbox</p>
+<input type="checkbox" />
+
+<p><code>input type=radio</code> &ndash; radio button</p>
+<input type="radio" />
 
 <p><code>input type=button</code> &ndash; button</p>
 <input type="button" value="button" />
@@ -154,7 +226,14 @@ The show is on <del>Oct. 14th</del> November 2nd.
 <p><code>input type=reset</code> &ndash; reset button</p>
 <input type="reset" value="reset" />
 
-<!-- input type=file &ndash; file upload control -->
+<p><code>input type=file</code> &ndash; file upload control</p>
+<input type="file" />
+
+<!--
+<p><code>CODE</code>TEXT</p>
+<input type="TYPE" value="VALUE" />
+-->
+
 <!-- input type=hidden &ndash; hidden input control -->
 <!-- input type=image &ndash; image-coordinates input control -->
 <!-- input type=datetime &ndash; global date-and-time input control -->
@@ -173,13 +252,35 @@ The show is on <del>Oct. 14th</del> November 2nd.
 <!-- ins &ndash; inserted text -->
 <!-- kbd &ndash; user input -->
 <!-- keygen &ndash; key-pair generator/input control -->
-<!-- label &ndash; caption for a form control -->
+
+<p><code>label</code> &ndash; caption for a form control</p>
+<label>Label ipsum</label>
+
 <!-- legend &ndash; title or explanatory caption -->
 <!-- li &ndash; list item -->
 <!-- link &ndash; inter-document relationship metadata -->
 <!-- map &ndash; image-map definition -->
 <!-- mark &ndash; marked (highlighted) text -->
-<!-- menu &ndash; list of commands -->
+
+<p><code>menu</code> &ndash; list of commands</p>
+<menu>
+  <li>
+    <button type="menu" value="File" menu="file-menu">
+    <menu type="popup" id="file-menu">
+      <menuitem label="New..." onclick="newFile()">
+      <menuitem label="Save..." onclick="saveFile()">
+    </menu>
+  </li>
+  <li>
+    <button type="menu" value="Edit" menu="edit-menu">
+    <menu type="popup" id="edit-menu">
+      <menuitem label="Cut..." onclick="cutEdit()">
+      <menuitem label="Copy..." onclick="copyEdit()">
+      <menuitem label="Paste..." onclick="pasteEdit()">
+    </menu>
+  </li>
+</menu>
+
 <!-- meta &ndash; metadata -->
 <!-- meta name &ndash; name-value metadata -->
 <!-- meta http-equiv=refresh &ndash; ÒrefreshÓ pragma directive -->
@@ -187,7 +288,18 @@ The show is on <del>Oct. 14th</del> November 2nd.
 <!-- meta charset &ndash; document character-encoding declaration -->
 <!-- meta http-equiv=content-type &ndash; document character-encoding declaration -->
 <!-- meter &ndash; scalar gauge -->
-<!-- nav &ndash; group of navigational links -->
+
+<p><code>nav</code> &ndash; group of navigational links</p>
+<nav>
+	<ul>
+		<li><a href="#0" title="Lorum ipsum dolor sit amet">Lorem</a></li>
+		<li><a href="#0" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
+		<li><a href="#0" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
+		<li><a href="#0" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
+		<li><a href="#0" title="Pellentesque fermentum dolor">Pellentesque</a></li>
+	</ul>
+</nav>
+
 <!-- noscript &ndash; fallback content for script -->
 <!-- object &ndash; generic external content -->
 
@@ -201,7 +313,13 @@ The show is on <del>Oct. 14th</del> November 2nd.
 <!-- optgroup &ndash; group of options -->
 <!-- option &ndash; option -->
 <!-- output &ndash; result of a calculation in a form -->
-<!-- p &ndash; paragraph -->
+
+<p><code>p</code> &ndash; paragraph</p>
+
+<div><!-- extra div to protect from disappearing with checkbox element showcase -->
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>	
+</div>
+
 <!-- param &ndash; initialization parameters for plugins -->
 <!-- pre &ndash; preformatted text -->
 <!-- progress &ndash; progress indicator -->
@@ -220,15 +338,42 @@ The show is on <del>Oct. 14th</del> November 2nd.
 </SCRIPT>
 
 <!-- section &ndash; section -->
-<!-- select &ndash; option-selection form control -->
-<!-- small &ndash; small print -->
+
+<p><code>select</code> &ndash; option-selection form control</p>
+<select>
+	<option>Please select</option>
+	<optgroup label="Group 1">
+		<option value="1.1">Option 1.1</option>
+	</optgroup> 
+	<optgroup label="Group 2">
+		<option value="2.1">Option 2.1</option>
+		<option value="2.2">Option 2.2</option>
+	</optgroup>
+	<optgroup label="Group 3" disabled>
+		<option value="3.1">Option 3.1</option>
+		<option value="3.2">Option 3.2</option>
+		<option value="3.3">Option 3.3</option>
+	</optgroup>
+</select>
+
+<p><code>small</code> &ndash; small print</p>
+<small>Small ipsum</small>
+
 <!-- source &ndash; media source -->
 <!-- span &ndash; generic span -->
-<!-- strong &ndash; strong importance -->
+
+<p><code>strong</code> &ndash; strong importance</p>
+<strong>Strong ipsum</strong>
+
 <!-- style &ndash; style (presentation) information -->
-<!-- sub &ndash; subscript -->
+
+<p><code>sub</code> &ndash; subscript</p>
+H<sub>2</sub>O
+
 <!-- summary &ndash; summary, caption, or legend for a details control -->
-<!-- sup &ndash; superscript -->
+
+<p><code>sup</code> &ndash; superscript</p>
+E=MC<sup>2</sup>
 
 <p><code>table</code> &ndash; table</p>
 <table>
@@ -298,6 +443,12 @@ The show is on <del>Oct. 14th</del> November 2nd.
 </video>
 
 <!-- wbr &ndash; line-break opportunity -->
+
+<hr />
+
+<h2>Common Combinations</h2>
+
+<p>Lorem ipsum dolor sit amet...</p>
 
 <hr />
 

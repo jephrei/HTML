@@ -5,17 +5,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <style>
-.cntrl:checked ~ p { display: none; }
-.cntrl:checked ~ p:after {
-    content: '\A';
-    white-space: pre;
-}
-	
+.cntrl:checked ~ p { display: none; }	
 </style>
 </head>
 <body>
 
-<div><!-- extra div to protect from disappearing with checkbox element showcase -->
+<input type="checkbox" class="cntrl" id="cntrl" /><label for="cntrl">compact view/elements only</label>
+
+<div><!-- extra div to override compact view -->
 
 <h1>All The Elements</h1>
 <p>a gallery of all the visual HTML elements for easy CSS style checking and HTML snippet copying.</p>
@@ -35,8 +32,6 @@
 </details>
 	
 </div>
-
-<input type="checkbox" class="cntrl" id="cntrl" /><label for="cntrl">elements only</label>
 
 <hr />
 
@@ -120,7 +115,7 @@ function draw_b() {
 <!-- datalist &ndash; predefined options for other controls -->
 <!-- dd &ndash; description or value -->
 
-<p>del &ndash; deleted text</p>
+<p><code>del</code> &ndash; deleted text</p>
 The show is on <del>Oct. 14th</del> November 2nd.
 
 <p><code>details</code> &ndash; control for additional on-demand information</p>
@@ -312,17 +307,27 @@ The show is on <del>Oct. 14th</del> November 2nd.
 
 <!-- optgroup &ndash; group of options -->
 <!-- option &ndash; option -->
-<!-- output &ndash; result of a calculation in a form -->
+
+<p><code>output</code> &ndash; result of a calculation in a form</p>
+<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+    <input type="range" name="b" value="50" /> +
+    <input type="number" name="a" value="10" /> =
+    <output name="result"></output>
+</form>
 
 <p><code>p</code> &ndash; paragraph</p>
-
-<div><!-- extra div to protect from disappearing with checkbox element showcase -->
+<div><!-- extra div to override compact view -->
 <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>	
 </div>
 
 <!-- param &ndash; initialization parameters for plugins -->
-<!-- pre &ndash; preformatted text -->
-<!-- progress &ndash; progress indicator -->
+
+<p><code>pre</code> &ndash; preformatted text</p>
+<pre>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</pre>
+
+<p><code>progress</code> &ndash; progress indicator</p>
+<progress max="100" value="66"></progress>
+
 <!-- q &ndash; quoted text -->
 <!-- rp &ndash; ruby parenthesis -->
 <!-- rt &ndash; ruby text -->

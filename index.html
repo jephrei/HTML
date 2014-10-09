@@ -1,112 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>All The Elements</title>
+<title>All The Elements!</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<style>
-#cntrl:checked ~ p { display: none; }	
-</style>
+<link rel="stylesheet" type="text/css" href="your.css" media="all">
 </head>
 <body>
 
-<input type="checkbox" id="cntrl" /><label for="cntrl">compact (elements only)</label>
-
-<div><!-- extra div to override compact view -->
-
-<h1>All The Elements</h1>
-<p>a gallery of all the visual HTML elements for easy CSS style checking and HTML snippet copying.</p>
-
-<details>
-	<summary>more&hellip;</summary>
-	<p>Attributes used:</p>
-	<ul>
-		<li><code>[alt]</code> - <code>img</code></li>
-		<li><code>[controls]</code> - <code>audio</code>, <code>video</code></li>
-		<li><code>[disabled]</code> - <code>video</code>, <code>input</code></li>
-		<li><code>[href]</code> - <code>a</code></li>
-		<li><code>[placeholder]</code> - <code>input</code></li>
-		<li><code>[poster]</code> - <code>video</code></li>
-		<li><code>[src]</code> - <code>img</code></li>
-		<li><code>[title]</code> - <code>a</code>, <code>img</code>, practically anything</li>
-		<li><code>[type]</code> - <code>video</code>, <code>input</code></li>
-	</ul>
-	<a href="http://github.com/jephrei/HTML">Github</a>
-</details>
-	
-</div>
+<h1>All The Elements!</h1>
+<p>An HTML element gallery for CSS style checking.</p>
+<p><a href="http://github.com/jephrei/HTML">Github</a></p>
 
 <hr />
 
-<p><code>a</code> &ndash; hyperlink</p>
-<a href="#0">hyperlink ipsum</a>
+<dl>
+	<dt><code>a</code></dt>
+	<!--<dd>hyperlink</dd>-->
+	<dd><a href="#0">Lorem ipsum</a></dd>
+</dl>
 
-<p><code>abbr</code> &ndash; abbreviation</p>
-<abbr title="Hypertext Markup Language">HTML</abbr>
+<dl>
+	<dt><code>abbr</code></dt>
+	<!--<dd>abbreviation</dd>-->
+	<dd><abbr title="Hypertext Markup Language">HTML</abbr></dd>
+</dl>
 
-<p><code>address</code> &ndash; contact information</p>
-<address>
-	<a href="#0">Jane Doe</a>,
-	<a href="#0">John Smith</a>,
-	contact persons for the <a href="#0">Tomfoolery Initiative</a>
-</address>
+<dl>
+	<dt><code>address</code></dt>
+	<!--<dd>contact information</dd>-->
+	<dd>
+		<address>
+			<a href="#0">Jane Doe</a>,
+			<a href="#0">John Smith</a>,
+			contact persons for the <a href="#0">Tomfoolery Initiative</a>
+		</address>
+	</dd>
+</dl>
 
-<!-- <p><code>area</code> &ndash; image-map hyperlink</p> -->
+<!-- area &ndash; image-map hyperlink -->
 <!-- article &ndash; article -->
 <!-- aside &ndash; tangential content -->
 
-<p><code>audio</code> &ndash; audio stream</p>
-<audio controls src="http://upload.wikimedia.org/wikipedia/commons/6/6f/Florence_Nightingale_voice_-_1576A_2nd_Rendition_Crop.ogg">
-	Your browser does not support the <code>audio</code> element.
-</audio>
+<dl>
+	<dt><code>audio</code></dt>
+	<!--<dd>audio stream</dd>-->
+	<dd>
+		<audio controls src="http://upload.wikimedia.org/wikipedia/commons/6/6f/Florence_Nightingale_voice_-_1576A_2nd_Rendition_Crop.ogg">
+			Your browser does not support the <code>audio</code> element.
+		</audio>
+	</dd>
+</dl>
 
-<p><code>b</code> &ndash; offset text conventionally styled in bold</p>
-<b>Lorem Ipsum</b>
+<dl>
+	<dt><code>b</code></dt>
+	<!--<dd>offset text conventionally styled in bold</dd>-->
+	<dd><b>Lorem ipsum</b></dd>
+</dl>
 
 <!-- base &ndash; base URL -->
 <!-- bdi &ndash; BiDi isolate -->
 <!-- bdo &ndash; BiDi override -->
 
-<p><code>blockquote</code> &ndash; block quotation</p>
-<blockquote>
-	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-	<cite>&ndash; John Doe (@jdoe) <a href="https://twitter.com/jdoe/statuses/9999999999999999">June 1st, 2014</a></cite>
-</blockquote>
+<dl>
+	<dt><code>blockquote</code></dt>
+	<!--<dd>block quotation</dd>-->
+	<dd>
+		<blockquote>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+			<cite>&ndash; John Doe (@jdoe) <a href="https://twitter.com/jdoe/statuses/9999999999999999">June 1st, 2014</a></cite>
+		</blockquote>
+	</dd>
+</dl>
 
 <!-- body &ndash; document body -->
 <!-- br &ndash; line break -->
 
-<p><code>button</code> &ndash; button</p>
-<button>Button</button>
-<button disabled>Disabled Button</button>
+<dl>
+	<dt><code>button</code></dt>
+	<!--<dd>button</dd>-->
+	<dd><button>Button</button></dd>
+	<dd><button disabled>Disabled Button</button></dd>
+	<dd><button type="submit">Submit Button</button></dd>
+	<dd><button type="reset">Reset Button</button></dd>
+	<dd><button type="button">Button Button</button></dd>
+</dl>
 
 <!-- button type=submit &ndash; submit button -->
 <!-- button type=reset &ndash; reset button -->
 <!-- button type=button &ndash; button with no additional semantics -->
-
-<!--
-<p><code>canvas</code> &ndash; canvas for dynamic graphics</p>
-<script>
-$(document).ready(function () {
-	
-function draw_b() {
-  var b_canvas = document.getElementById("b");
-  var b_context = b_canvas.getContext("2d");
-  b_context.fillRect(50, 25, 150, 100);
-}
-
-});
-</script>
-<canvas id="b" width="300" height="225"></canvas>
--->
-
+<!-- canvas &ndash; canvas for dynamic graphics -->
 <!-- caption &ndash; table title -->
 
-<p><code>cite</code> &ndash; cited title of a work</p>
-<span>More information can be found in <cite>[ISO-0000]</cite>.</span>
+<dl>
+	<dt><code>cite</code></dt>
+	<!--<dd>cited title of a work</dd>-->
+	<dd>
+		More information can be found in <cite>[ISO-0000]</cite>.
+	</dd>
+</dl>
 
-<p><code>code</code> &ndash; code fragment</p>
-<code>&lt;h1>Hello, World!&lt;h1></code>
+<dl>
+	<dt><code>code</code></dt>
+	<!--<dd>code fragment</dd>-->
+	<dd>
+		<code>&lt;h1>Hello, World!&lt;h1></code>
+	</dd>
+</dl>
 
 <!-- col &ndash; table column -->
 <!-- colgroup &ndash; table column group -->
@@ -117,168 +117,346 @@ function draw_b() {
 <!-- datalist &ndash; predefined options for other controls -->
 <!-- dd &ndash; description or value -->
 
-<p><code>del</code> &ndash; deleted text</p>
-<span>The show is on <del>Oct. 14th</del> November 2nd.</span>
+<dl>
+	<dt><code>del</code></dt>
+	<!--<dd>deleted text</dd>-->
+	<dd>
+		The show is on <del>Oct. 14th</del> November 2nd.
+	</dd>
+</dl>
 
-<p><code>details</code> &ndash; control for additional on-demand information</p>
-<details>
-  <summary>Summary</summary>
-  <p>Details. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-</details>
+<dl>
+	<dt><code>details</code></dt>
+	<!--<dd>control for additional on-demand information</dd>-->
+	<dd>
+		<details>
+			<summary>Summary</summary>
+			<p>Details. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+		</details>
+	</dd>
+</dl>
 
-<p><code>dfn</code> &ndash; defining instance</p>
-<span><dfn>The Internet</dfn> is a global system of interconnected networks that use the Internet Protocol Suite (TCP/IP) to serve billions of users worldwide.</span>
+<dl>
+	<dt><code>dfn</code></dt>
+	<!--<dd>defining instance</dd>-->
+	<dd>
+		<dfn>The Internet</dfn> is a global system of interconnected networks that use the Internet Protocol Suite (TCP/IP) to serve billions of users worldwide.
+	</dd>
+</dl>
 
 <!-- div &ndash; generic flow container -->
 
-<p><code>dl</code> &ndash; description list</p>
 <dl>
-   <dt>Center</dt>
-   <dt>Centre</dt>
-   <dd>A point equidistant from all points on the surface of a sphere.</dd>
-   <dd>In some field sports, the player who holds the middle position on the field, court, or forward line.</dd>
+	<dt><code>dl</code></dt>
+	<!--<dd>description list</dd>-->
+	<dd>
+		<dl>
+		   <dt>Center</dt>
+		   <dt>Centre</dt>
+		   <dd>A point equidistant from all points on the surface of a sphere.</dd>
+		   <dd>In some field sports, the player who holds the middle position on the field, court, or forward line.</dd>
+		</dl>
+	</dd>
 </dl>
 
 <!-- dt &ndash; term or name -->
 
-<p><code>em</code> &ndash; emphatic stress</p>
-<em>emphasis</em>
+<dl>
+	<dt><code>em</code></dt>
+	<!--<dd>emphatic stress</dd>-->
+	<dd>Lorem ipsum <em>dolor sit</em> amet.</dd>
+</dl>
 
 <!-- embed &ndash; integration point for plugins -->
 
-<p><code>fieldset</code> &ndash; set of related form controls</p>
-<fieldset>
-	<legend>Legend</legend>
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque viverra sodales massa eu feugiat. Duis nisi nibh, lacinia a ultrices commodo, mattis et dui.
-</fieldset>
+<dl>
+	<dt><code>fieldset</code></dt>
+	<!--<dd>set of related form controls</dd>-->
+	<dd>
+		<fieldset>
+			<legend>Legend</legend>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque viverra sodales massa eu feugiat. Duis nisi nibh, lacinia a ultrices commodo, mattis et dui.
+		</fieldset>
+	</dd>
+</dl>
 
 <!-- figcaption &ndash; figure caption -->
 
-<p><code>figure</code> &ndash; figure with optional caption</p>
-<figure>
-	<img src="http://placekitten.com/240" />
-	<figcaption>a cute kitten</figcaption>
-</figure>
+<dl>
+	<dt><code>figure</code></dt>
+	<!--<dd>figure with optional caption</dd>-->
+	<dd>
+		<figure>
+			<img src="http://placekitten.com/240" />
+			<figcaption>a cute kitten</figcaption>
+		</figure>
+	</dd>
+</dl>
 
 <!-- footer &ndash; footer -->
 <!-- form &ndash; user-submittable form -->
 
-<p><code>h1</code> &ndash; heading</p>
-<h1>Header 1</h1>
+<dl>
+	<dt><code>h1</code></dt>
+	<dd></dd>
+	<dd><h1>Header 1</h1></dd>
+</dl>
 
-<p><code>h2</code> &ndash; heading</p>
-<h2>Header 2</h2>
+<dl>
+	<dt><code>h2</code></dt>
+	<!--<dd>heading</dd>-->
+	<dd><h2>Header 2</h2></dd>
+</dl>
 
-<p><code>h3</code> &ndash; heading</p>
-<h3>Header 3</h3>
+<dl>
+	<dt><code>h3</code></dt>
+	<!--<dd>heading</dd>-->
+	<dd><h3>Header 3</h3></dd>
+</dl>
 
-<p><code>h4</code> &ndash; heading</p>
-<h4>Header 4</h4>
+<dl>
+	<dt><code>h4</code></dt>
+	<!--<dd>heading</dd>-->
+	<dd><h4>Header 4</h4></dd>
+</dl>
 
-<p><code>h5</code> &ndash; heading</p>
-<h5>Header 5</h5>
+<dl>
+	<dt><code>h5</code></dt>
+	<!--<dd>heading</dd>-->
+	<dd><h5>Header 5</h5></dd>
+</dl>
 
-<p><code>h6</code> &ndash; heading</p>
-<h6>Header 6</h6>
+<dl>
+	<dt><code>h6</code></dt>
+	<!--<dd>heading</dd>-->
+	<dd><h6>Header 6</h6></dd>
+</dl>
 
 <!-- head &ndash; document metadata container -->
 <!-- header &ndash; header -->
 <!-- hgroup &ndash; heading group -->
 
-<p><code>hr</code> &ndash; thematic break</p>
-<hr />
+<dl>
+	<dt><code>hr</code></dt>
+	<!--<dd>thematic break</dd>-->
+	<dd><hr /></dd>
+</dl>
 
 <!-- html &ndash; root element -->
 
-<p><code>i</code> &ndash; offset text conventionally styled in italic</p>
-<i>italics</i>
+<dl>
+	<dt><code>i</code></dt>
+	<!--<dd>offset text conventionally styled in italic</dd>-->
+	<dd><i>italics</i></dd>
+</dl>
 
-<p><code>iframe</code> &ndash; nested browsing context (inline frame)</p>
-<iframe></iframe>
+<dl>
+	<dt><code>iframe</code></dt>
+	<!--<dd>nested browsing context (inline frame)</dd>-->
+	<dd><iframe></iframe></dd>
+</dl>
 
-<p><code>img</code> &ndash; image</p>
-<img src="http://placekitten.com/240" alt="a cute kitten" title="it's a cute frakkin' kitten" />
+<dl>
+	<dt><code>img</code></dt>
+	<!--<dd>image</dd>-->
+	<dd><img src="http://placekitten.com/240" alt="a cute kitten" title="it's a cute frakkin' kitten" /></dd>
+</dl>
 
-<p><code>input</code> &ndash; input control</p>
-<input />
+<dl>
+	<dt><code>input</code></dt>
+	<!--<dd>input control</dd>-->
+	<dd><input /></dd>
+</dl>
 
-<p><code>input type=text</code> &ndash; text-input field</p>
-<input type="text" placeholder="Text Input" />
+<dl>
+	<dt><code>input type=text</code></dt>
+	<!--<dd>text-input field</dd>-->
+	<dd><input type="text" placeholder="Text Input" /></dd>
+</dl>
 
-<p><code>input type=password</code> &ndash; password-input field</p>
-<input type="password" />
+<dl>
+	<dt><code>input type=password</code></dt>
+	<!--<dd>password-input field</dd>-->
+	<dd><input type="password" /></dd>
+</dl>
 
-<p><code>input type=checkbox</code> &ndash; checkbox</p>
-<input type="checkbox" />
+<dl>
+	<dt><code>input type=checkbox</code></dt>
+	<!--<dd>checkbox</dd>-->
+	<dd><input type="checkbox" /></dd>
+</dl>
 
-<p><code>input type=radio</code> &ndash; radio button</p>
-<input type="radio" />
+<dl>
+	<dt><code>input type=radio</code></dt>
+	<!--<dd>radio button</dd>-->
+	<dd><input type="radio" /></dd>
+</dl>
 
-<p><code>input type=button</code> &ndash; button</p>
-<input type="button" value="button" />
+<dl>
+	<dt><code>input type=button</code></dt>
+	<!--<dd>button</dd>-->
+	<dd><input type="button" value="button" /></dd>
+</dl>
 
-<p><code>input type=submit</code> &ndash; submit button</p>
-<input type="submit" value="submit" />
+<dl>
+	<dt><code>input type=submit</code></dt>
+	<!--<dd>submit button</dd>-->
+	<dd><input type="submit" value="submit" /></dd>
+</dl>
 
-<p><code>input type=reset</code> &ndash; reset button</p>
-<input type="reset" value="reset" />
+<dl>
+	<dt><code>input type=reset</code></dt>
+	<!--<dd>reset button</dd>-->
+	<dd><input type="reset" value="reset" /></dd>
+</dl>
 
-<p><code>input type=file</code> &ndash; file upload control</p>
-<input type="file" />
-
-<!--
-<p><code>CODE</code>TEXT</p>
-<input type="TYPE" value="VALUE" />
--->
+<dl>
+	<dt><code>input type=file</code></dt>
+	<!--<dd>file upload control</dd>-->
+	<dd><input type="file" /></dd>
+</dl>
 
 <!-- input type=hidden &ndash; hidden input control -->
-<!-- input type=image &ndash; image-coordinates input control -->
-<!-- input type=datetime &ndash; global date-and-time input control -->
-<!-- input type=datetime-local &ndash; local date-and-time input control -->
-<!-- input type=date &ndash; date input control -->
-<!-- input type=month &ndash; year-and-month input control -->
-<!-- input type=time &ndash; time input control -->
-<!-- input type=week &ndash; year-and-week input control -->
-<!-- input type=number &ndash; number input control -->
-<!-- input type=range &ndash; imprecise number-input control -->
-<!-- input type=email &ndash; e-mail address input control -->
-<!-- input type=url &ndash; URL input control -->
-<!-- input type=search &ndash; search field -->
-<!-- input type=tel &ndash; telephone-number-input field -->
-<!-- input type=color &ndash; color-well control -->
-<!-- ins &ndash; inserted text -->
+
+<dl>
+	<dt><code>input type=image</code></dt>
+	<!--<dd>image-coordinates input control</dd>-->
+	<dd><input type="image" src="http://placekitten.com/120" alt="a cute kitten button" /></dd>
+</dl>
+
+<dl>
+	<dt><code>input type=datetime</code></dt>
+	<!--<dd>global date-and-time input control</dd>-->
+	<dd><input type="datetime" /></dd>
+</dl>
+
+<dl>
+	<dt><code>input type=datetime-local</code></dt>
+	<!--<dd>local date-and-time input control</dd>-->
+	<dd><input type="datetime-local" /></dd>
+</dl>
+
+<dl>
+	<dt><code>input type=date</code></dt>
+	<!--<dd>date input control</dd>-->
+	<dd><input type="date" /></dd>
+</dl>
+
+<dl>
+	<dt><code>input type=month</code></dt>
+	<!--<dd>year-and-month input control</dd>-->
+	<dd><input type="month" /></dd>
+</dl>
+
+<dl>
+	<dt><code>input type=time</code></dt>
+	<!--<dd>time input control</dd>-->
+	<dd><input type="time" /></dd>
+</dl>
+
+<dl>
+	<dt><code>input type=week</code></dt>
+	<!--<dd>year-and-week input control</dd>-->
+	<dd><input type="week" /></dd>
+</dl>
+
+<dl>
+	<dt><code>input type=number</code></dt>
+	<!--<dd>number input control</dd>-->
+	<dd><input type="number" /></dd>
+</dl>
+
+<dl>
+	<dt><code>input type=range</code></dt>
+	<!--<dd>imprecise number-input control</dd>-->
+	<dd><input type="range" /></dd>
+</dl>
+
+<dl>
+	<dt><code>input type=email</code></dt>
+	<!--<dd>e-mail address input control</dd>-->
+	<dd><input type="email" /></dd>
+</dl>
+
+<dl>
+	<dt><code>input type=url</code></dt>
+	<!--<dd>URL input control</dd>-->
+	<dd><input type="url" /></dd>
+</dl>
+
+<dl>
+	<dt><code>input type=search</code></dt>
+	<!--<dd>search field</dd>-->
+	<dd><input type="search" /></dd>
+</dl>
+
+<dl>
+	<dt><code>input type=tel</code></dt>
+	<!--<dd>telephone-number-input field</dd>-->
+	<dd><input type="tel" /></dd>
+</dl>
+
+<dl>
+	<dt><code>input type=color</code></dt>
+	<!--<dd>color-well control</dd>-->
+	<dd><input type="color" /></dd>
+</dl>
+
+<dl>
+	<dt><code>ins</code></dt>
+	<!--<dd>inserted text</dd>-->
+	<dd>Lorem ipsum <ins>dolor sit</ins> amet.</dd>
+</dl>
+
 <!-- kbd &ndash; user input -->
 <!-- keygen &ndash; key-pair generator/input control -->
 
-<p><code>label</code> &ndash; caption for a form control</p>
-<label>Label ipsum</label>
+<dl>
+	<dt><code>label</code></dt>
+	<!--<dd>caption for a form control</dd>-->
+	<dd>Lorem ipsum <label>dolor sit</label> amet.</dd>
+</dl>
 
 <!-- legend &ndash; title or explanatory caption -->
 <!-- li &ndash; list item -->
 <!-- link &ndash; inter-document relationship metadata -->
 <!-- map &ndash; image-map definition -->
 
-<p><code>mark</code> &ndash; marked (highlighted) text</p>
-<span><mark>Lorem ipsum</mark> dolor sit amet.</span>
+<dl>
+	<dt><code>mark</code></dt>
+	<!--<dd>marked (highlighted) text</dd>-->
+	<dd>Lorem ipsum <mark>dolor sit</mark> amet.</dd>
+</dl>
 
-<p><code>menu</code> &ndash; list of commands</p>
-<menu>
-  <li>
-    <button type="menu" value="File" menu="file-menu">
-    <menu type="popup" id="file-menu">
-      <menuitem label="New..." onclick="newFile()">
-      <menuitem label="Save..." onclick="saveFile()">
-    </menu>
-  </li>
-  <li>
-    <button type="menu" value="Edit" menu="edit-menu">
-    <menu type="popup" id="edit-menu">
-      <menuitem label="Cut..." onclick="cutEdit()">
-      <menuitem label="Copy..." onclick="copyEdit()">
-      <menuitem label="Paste..." onclick="pasteEdit()">
-    </menu>
-  </li>
-</menu>
+<dl>
+	<dt><code>menu</code></dt>
+	<!--<dd>list of commands</dd>-->
+	<dd>
+		<menu type="toolbar">
+		  <li>
+			<menu label="File">
+			  <button type="button" onclick="fnew()">New...</button>
+			  <button type="button" onclick="fopen()">Open...</button>
+			  <button type="button" onclick="fsave()">Save</button>
+			  <button type="button" onclick="fsaveas()">Save as...</button>
+			</menu>
+		  </li>
+		  <li>
+			<menu label="Edit">
+			  <button type="button" onclick="ecopy()">Copy</button>
+			  <button type="button" onclick="ecut()">Cut</button>
+			  <button type="button" onclick="epaste()">Paste</button>
+			</menu>
+		  </li>
+		  <li>
+			<menu label="Help">
+			  <li><a href="help.html">Help</a></li>
+			  <li><a href="about.html">About</a></li>
+			</menu>
+		  </li>
+		</menu>
+	</dd>
+</dl>
 
 <!-- meta &ndash; metadata -->
 <!-- meta name &ndash; name-value metadata -->
@@ -287,147 +465,224 @@ function draw_b() {
 <!-- meta charset &ndash; document character-encoding declaration -->
 <!-- meta http-equiv=content-type &ndash; document character-encoding declaration -->
 
-<p><code>meter</code> &ndash; scalar gauge</p>
-<meter min="200" max="500" value="350">350 degrees</meter>
-<meter low="69" high="80" max="100" value="84">B</meter>
+<dl>
+	<dt><code>meter</code></dt>
+	<!--<dd>scalar gauge</dd>-->
+	<dd>
+		<meter min="200" max="500" value="350">350 degrees</meter>
+		<meter low="69" high="80" max="100" value="84">B</meter>
+	</dd>
+</dl>
 
-<p><code>nav</code> &ndash; group of navigational links</p>
-<nav>
-	<ul>
-		<li><a href="#0" title="Lorum ipsum dolor sit amet">Lorem</a></li>
-		<li><a href="#0" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
-		<li><a href="#0" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
-		<li><a href="#0" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
-		<li><a href="#0" title="Pellentesque fermentum dolor">Pellentesque</a></li>
-	</ul>
-</nav>
+<dl>
+	<dt><code>nav</code></dt>
+	<!--<dd>group of navigational links</dd>-->
+	<dd>
+		<nav>
+			<ul>
+				<li><a href="#0" title="Lorum ipsum dolor sit amet">Lorem</a></li>
+				<li><a href="#0" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
+				<li><a href="#0" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
+				<li><a href="#0" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
+				<li><a href="#0" title="Pellentesque fermentum dolor">Pellentesque</a></li>
+			</ul>
+		</nav>
+	</dd>
+</dl>
 
 <!-- noscript &ndash; fallback content for script -->
 <!-- object &ndash; generic external content -->
 
-<p><code>ol</code> &ndash; ordered list</p>
-<ol>
-	<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-	<li>Aliquam tincidunt mauris eu risus.</li>
-	<li>Vestibulum auctor dapibus neque.</li>
-</ol>
+<dl>
+	<dt><code>ol</code></dt>
+	<!--<dd>ordered list</dd>-->
+	<dd>
+		<ol>
+			<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+			<li>Aliquam tincidunt mauris eu risus.</li>
+			<li>Vestibulum auctor dapibus neque.</li>
+		</ol>
+	</dd>
+</dl>
 
 <!-- optgroup &ndash; group of options -->
 <!-- option &ndash; option -->
 
-<p><code>output</code> &ndash; result of a calculation in a form</p>
-<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
-    <input type="range" name="b" value="50" /> +
-    <input type="number" name="a" value="10" /> =
-    <output name="result"></output>
-</form>
+<dl>
+	<dt><code>output</code></dt>
+	<!--<dd>result of a calculation in a form</dd>-->
+	<dd>
+		<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+			<input type="range" name="b" value="50" /> +
+			<input type="number" name="a" value="10" /> =
+			<output name="result"></output>
+		</form>
+	</dd>
+</dl>
 
-<p><code>p</code> &ndash; paragraph</p>
-<div><!-- extra div to override compact view -->
-<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>	
-</div>
+<dl>
+	<dt><code>p</code></dt>
+	<!--<dd>paragraph</dd>-->
+	<dd>
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+	</dd>
+</dl>
 
 <!-- param &ndash; initialization parameters for plugins -->
 
-<p><code>pre</code> &ndash; preformatted text</p>
-<pre>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</pre>
+<dl>
+	<dt><code>pre</code></dt>
+	<!--<dd>preformatted text</dd>-->
+	<dd>
+		<pre>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</pre>
+	</dd>
+</dl>
 
-<p><code>progress</code> &ndash; progress indicator</p>
-<progress max="100" value="66"></progress>
+<dl>
+	<dt><code>progress</code></dt>
+	<!--<dd>progress indicator</dd>-->
+	<dd>
+		<progress max="100" value="66"></progress>
+	</dd>
+</dl>
 
-<p><code>q</code> &ndash; quoted text</p>
-<span>Lorem ipsum <q>dolor sit</q> amet.</span>
+<dl>
+	<dt><code>q</code></dt>
+	<!--<dd>quoted text</dd>-->
+	<dd>Lorem ipsum <q>dolor sit</q> amet.</dd>
+	<dd><q>Lorem ipsum <q>dolor sit</q> amet.</q></dd>
+</dl>
 
 <!-- rp &ndash; ruby parenthesis -->
 <!-- rt &ndash; ruby text -->
 <!-- ruby &ndash; ruby annotation -->
-<!-- s &ndash; struck text -->
-<!-- samp &ndash; (sample) output -->
+<dl>
+	<dt><code>s</code></dt>
+	<!--<dd>struck text</dd>-->
+	<dd>Lorem ipsum <s>dolor sit</s> amet.</dd>
+</dl>
 
-<p>script &ndash; embedded script</p>
-<SCRIPT TYPE="text/javascript">
-<!-- comment to end of line
-  document.write("This sentence was written by a script.");
-// comment to end of line -->
-</SCRIPT>
+<dl>
+	<dt><code>samp</code></dt>
+	<!--<dd>(sample) output</dd>-->
+	<dd>
+		Lorem ipsum <samp>dolor sit</samp> amet.
+	</dd>
+</dl>
 
+<!-- script &ndash; embedded script -->
 <!-- section &ndash; section -->
 
-<p><code>select</code> &ndash; option-selection form control</p>
-<select>
-	<option>Please select</option>
-	<optgroup label="Group 1">
-		<option value="1.1">Option 1.1</option>
-	</optgroup> 
-	<optgroup label="Group 2">
-		<option value="2.1">Option 2.1</option>
-		<option value="2.2">Option 2.2</option>
-	</optgroup>
-	<optgroup label="Group 3" disabled>
-		<option value="3.1">Option 3.1</option>
-		<option value="3.2">Option 3.2</option>
-		<option value="3.3">Option 3.3</option>
-	</optgroup>
-</select>
+<dl>
+	<dt><code>select</code></dt>
+	<!--<dd>option-selection form control</dd>-->
+	<dd>
+		<select>
+			<option>Please select</option>
+			<optgroup label="Group 1">
+				<option value="1.1">Option 1.1</option>
+			</optgroup>
+			<optgroup label="Group 2">
+				<option value="2.1">Option 2.1</option>
+				<option value="2.2">Option 2.2</option>
+			</optgroup>
+			<optgroup label="Group 3" disabled>
+				<option value="3.1">Option 3.1</option>
+				<option value="3.2">Option 3.2</option>
+				<option value="3.3">Option 3.3</option>
+			</optgroup>
+		</select>
+	</dd>
+</dl>
 
-<p><code>small</code> &ndash; small print</p>
-<small>Small ipsum</small>
+<dl>
+	<dt><code>small</code></dt>
+	<!--<dd>small print</dd>-->
+	<dd>
+		<small>Small ipsum</small>
+	</dd>
+</dl>
 
 <!-- source &ndash; media source -->
 <!-- span &ndash; generic span -->
 
-<p><code>strong</code> &ndash; strong importance</p>
-<strong>Strong ipsum</strong>
+<dl>
+	<dt><code>strong</code></dt>
+	<!--<dd>strong importance</dd>-->
+	<dd>
+		<strong>Strong ipsum</strong>
+	</dd>
+</dl>
 
 <!-- style &ndash; style (presentation) information -->
 
-<p><code>sub</code> &ndash; subscript</p>
-<span>H<sub>2</sub>O</span>
+<dl>
+	<dt><code>sub</code></dt>
+	<!--<dd>subscript</dd>-->
+	<dd>
+		H<sub>2</sub>O
+	</dd>
+</dl>
 
 <!-- summary &ndash; summary, caption, or legend for a details control -->
 
-<p><code>sup</code> &ndash; superscript</p>
-<span>E=MC<sup>2</sup></span>
+<dl>
+	<dt><code>sup</code></dt>
+	<!--<dd>superscript</dd>-->
+	<dd>
+		E=MC<sup>2</sup>
+	</dd>
+</dl>
 
-<p><code>table</code> &ndash; table</p>
-<table>
-	<caption>Table caption</caption>
-	<thead>
-		<tr>
-			<th>Table Header 1</th>
-			<th>Table Header 2</th>
-			<th>Table Header 3</th>
-		</tr>
-	</thead>
-	<tfoot>
-		<tr>
-			<td colspan="3">Table footer</td>
-		</tr>
-	</tfoot>
-	<tbody>
-		<tr>
-			<td>Division 1</td>
-			<td>Division 2</td>
-			<td>Division 3</td>
-		</tr>
-		<tr>
-			<td>Division 1</td>
-			<td>Division 2</td>
-			<td>Division 3</td>
-		</tr>
-		<tr>
-			<td>Division 1</td>
-			<td>Division 2</td>
-			<td>Division 3</td>
-		</tr>
-	</tbody>
-</table>
+<dl>
+	<dt><code>table</code></dt>
+	<!--<dd>table</dd>-->
+	<dd>
+		<table>
+			<caption>Table caption</caption>
+			<thead>
+				<tr>
+					<th>Table Header 1</th>
+					<th>Table Header 2</th>
+					<th>Table Header 3</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<td colspan="3">Table footer</td>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td>Division 1</td>
+					<td>Division 2</td>
+					<td>Division 3</td>
+				</tr>
+				<tr>
+					<td>Division 1</td>
+					<td>Division 2</td>
+					<td>Division 3</td>
+				</tr>
+				<tr>
+					<td>Division 1</td>
+					<td>Division 2</td>
+					<td>Division 3</td>
+				</tr>
+			</tbody>
+		</table>
+	</dd>
+</dl>
 
 <!-- tbody &ndash; table row group -->
 <!-- td &ndash; table cell -->
 
-<p><code>textarea</code> &ndash; text input area</p>
-<textarea>Placeholder</textarea>
+<dl>
+	<dt><code>textarea</code></dt>
+	<!--<dd>text input area</dd>-->
+	<dd>
+		<textarea>Placeholder</textarea>
+	</dd>
+</dl>
 
 <!-- tfoot &ndash; table footer row group -->
 <!-- th &ndash; table header cell -->
@@ -437,38 +692,101 @@ function draw_b() {
 <!-- tr &ndash; table row -->
 <!-- track &ndash; supplementary media track -->
 
-<p><code>u</code> &ndash; offset text conventionally styled with an underline</p>
-<u>Lorem ipsum</u>
+<dl>
+	<dt><code>u</code></dt>
+	<!--<dd>offset text conventionally styled with an underline</dd>-->
+	<dd>
+		<u>Lorem ipsum</u>
+	</dd>
+</dl>
 
-<p><code>ul</code> &ndash; unordered list</p>
-<ul>
-	<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-	<li>Aliquam tincidunt mauris eu risus.</li>
-	<li>Vestibulum auctor dapibus neque.</li>
-</ul>
+<dl>
+	<dt><code>ul</code></dt>
+	<!--<dd>unordered list</dd>-->
+	<dd>
+		<ul>
+			<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+			<li>Aliquam tincidunt mauris eu risus.</li>
+			<li>Vestibulum auctor dapibus neque.</li>
+		</ul>
+	</dd>
+</dl>
 
-<p><code>var</code> &ndash; variable or placeholder text</p>
-<var>Variable</var>
+<dl>
+	<dt><code>var</code></dt>
+	<!--<dd>variable or placeholder text</dd>-->
+	<dd>
+		<var>Variable</var>
+	</dd>
+</dl>
 
-<p>video &ndash; video</p>
-<video controls src="http://upload.wikimedia.org/wikipedia/commons/7/79/Big_Buck_Bunny_small.ogv" poster="http://placehold.it/160x90&text=poster+image">
-  Your browser doesn't support the <code>video</code> element.
-  You can <a href="http://upload.wikimedia.org/wikipedia/commons/7/79/Big_Buck_Bunny_small.ogv">download the video</a> instead.
-</video>
+<dl>
+	<dt><code>video</code></dt>
+	<!--<dd>video</dd>-->
+	<dd>
+		<video controls src="http://upload.wikimedia.org/wikipedia/commons/7/79/Big_Buck_Bunny_small.ogv" poster="http://placehold.it/160x90%26text=poster+image">
+			Your browser doesn't support the <code>video</code> element.
+			You can <a href="http://upload.wikimedia.org/wikipedia/commons/7/79/Big_Buck_Bunny_small.ogv">download the video</a> instead.
+		</video>
+	</dd>
+</dl>
 
 <!-- wbr &ndash; line-break opportunity -->
 
+<!--
 <hr />
-
-<div style="display: none;"><!-- extra div to override compact view -->
 
 <h2>Common Semantic Element Layouts</h2>
-<p>Lorem ipsum dolor sit amet...</p>
+
+<dl>
+	<dt><code>pre code</code></dt>
+	<dd>
+<pre><code>&lt;ul>
+   &lt;li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li>
+   &lt;li>Aliquam tincidunt mauris eu risus.&lt;/li>
+   &lt;li>Vestibulum auctor dapibus neque.&lt;/li>
+&lt;/ul>
+</code></pre>
+	</dd>
+</dl>
+
+<dl>
+	<dt><code>ul ul</code></dt>
+	<dd>
+		<ul>
+		   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+		   <li>Aliquam tincidunt mauris eu risus.
+				<ul>
+					<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+					<li>Aliquam tincidunt mauris eu risus.</li>
+					<li>Vestibulum auctor dapibus neque.</li>
+				</ul>
+		   </li>
+		   <li>Vestibulum auctor dapibus neque.</li>
+		</ul>
+	</dd>
+</dl>
+
+<dl>
+	<dt><code>label</code> next to <code>input</code></dt>
+	<dd>
+		<label for="name-first">First Name:</label> <input type="text" id="name-first" />
+	</dd>
+</dl>
+
+<dl>
+	<dt><code>a</code> with text and <code>img</code> inside</dt>
+	<dd>
+		<a href="#0">
+			<img src="http://placehold.it/32" />
+			Lorem ipsum
+		</a>
+	</dd>
+</dl>
+-->
 
 <hr />
-
-</div>
-
+<a href="http://validator.w3.org/check?uri=http://github.com/jephrei/HTML">check validation</a>
 <address>curated by <a href="https://github.com/jephrei" rel="author">jephrei</a></address>
 
 </body>

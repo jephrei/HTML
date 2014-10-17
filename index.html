@@ -266,6 +266,7 @@
 	<dt><code>input</code></dt>
 	<!--<dd>input control</dd>-->
 	<dd><input /></dd>
+	<dd><input placeholder="With placeholder" /></dd>
 </dl>
 
 <dl>
@@ -284,12 +285,14 @@
 	<dt><code>input type=checkbox</code></dt>
 	<!--<dd>checkbox</dd>-->
 	<dd><input type="checkbox" /></dd>
+	<dd><input type="checkbox" checked /></dd>
 </dl>
 
 <dl>
 	<dt><code>input type=radio</code></dt>
 	<!--<dd>radio button</dd>-->
 	<dd><input type="radio" /></dd>
+	<dd><input type="radio" checked /></dd>
 </dl>
 
 <dl>
@@ -578,6 +581,33 @@
 	<!--<dd>option-selection form control</dd>-->
 	<dd>
 		<select>
+			<option value="1">Option 1</option>
+			<option value="2">Option 2</option>
+			<option value="3">Option 3</option>
+			<option value="4">Option 4</option>
+			<option value="5">Option 5</option>
+			<option value="6">Option 6</option>
+		</select>
+	</dd>
+	<dd>
+		<select multiple>
+			<option>Please select</option>
+			<optgroup label="Group 1">
+				<option value="1.1">Option 1.1</option>
+			</optgroup>
+			<optgroup label="Group 2">
+				<option value="2.1">Option 2.1</option>
+				<option value="2.2">Option 2.2</option>
+			</optgroup>
+			<optgroup label="Group 3" disabled>
+				<option value="3.1">Option 3.1</option>
+				<option value="3.2">Option 3.2</option>
+				<option value="3.3">Option 3.3</option>
+			</optgroup>
+		</select>
+	</dd>
+	<dd>
+		<select>
 			<option>Please select</option>
 			<optgroup label="Group 1">
 				<option value="1.1">Option 1.1</option>
@@ -732,58 +762,6 @@
 </dl>
 
 <!-- wbr &ndash; line-break opportunity -->
-
-<!--
-<hr />
-
-<h2>Common Semantic Element Layouts</h2>
-
-<dl>
-	<dt><code>pre code</code></dt>
-	<dd>
-<pre><code>&lt;ul>
-   &lt;li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li>
-   &lt;li>Aliquam tincidunt mauris eu risus.&lt;/li>
-   &lt;li>Vestibulum auctor dapibus neque.&lt;/li>
-&lt;/ul>
-</code></pre>
-	</dd>
-</dl>
-
-<dl>
-	<dt><code>ul ul</code></dt>
-	<dd>
-		<ul>
-		   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-		   <li>Aliquam tincidunt mauris eu risus.
-				<ul>
-					<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-					<li>Aliquam tincidunt mauris eu risus.</li>
-					<li>Vestibulum auctor dapibus neque.</li>
-				</ul>
-		   </li>
-		   <li>Vestibulum auctor dapibus neque.</li>
-		</ul>
-	</dd>
-</dl>
-
-<dl>
-	<dt><code>label</code> next to <code>input</code></dt>
-	<dd>
-		<label for="name-first">First Name:</label> <input type="text" id="name-first" />
-	</dd>
-</dl>
-
-<dl>
-	<dt><code>a</code> with text and <code>img</code> inside</dt>
-	<dd>
-		<a href="#0">
-			<img src="http://placehold.it/32" />
-			Lorem ipsum
-		</a>
-	</dd>
-</dl>
--->
 
 <hr />
 <a href="http://validator.w3.org/check?uri=http://github.com/jephrei/HTML">check validation</a>

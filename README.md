@@ -5,7 +5,7 @@ a gallery of all the visual HTML elements for easy CSS style checking and HTML s
 Demo:
 http://jephrei.github.io/HTML
 
-Please [submit an issue](https://github.com/jephrei/HTML/issues) if you see something that could be better.
+Please [submit an issue](http://github.com/jephrei/HTML/issues/new) if you see something that could be better.
 
 ## Attributes used:
 
